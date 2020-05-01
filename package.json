@@ -4,7 +4,8 @@
   "description": "Transform stream data from json to csv",
   "main": "index.js",
   "dependencies": {
-    "async": "^2.1.5"
+    "async": "^2.1.5",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -19,7 +20,9 @@
     "readable-stream": "~1.0.2"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -35,5 +38,6 @@
     "transform"
   ],
   "author": "Mirco Zeiss <mirco.zeiss@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
